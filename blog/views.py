@@ -15,8 +15,9 @@ def posts(request):
         raise Http404()
     
 
-def post_detail(request):
-    try:
-        return HttpResponse("post detail is working!")
-    except:
-        raise Http404()
+def post_detail(request, slug):
+    if slug == "first-post-detail":
+        try:
+            return HttpResponse("post detail is working!")
+        except:
+            raise Http404()
