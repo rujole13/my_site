@@ -16,8 +16,5 @@ def posts(request):
     
 
 def post_detail(request, slug):
-    if slug == "the-mountains":
-        try:
-            return HttpResponse("post detail is working!")
-        except:
-            raise Http404()
+    return render(request, "blog/post-detail.html")
+
