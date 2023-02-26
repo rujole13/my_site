@@ -10,13 +10,13 @@ def starting_page(request):
 
 def posts(request):
     try:
-        return HttpResponse("posts look good!")
+        return render(request, "blog/all-posts.html")
     except:
         raise Http404()
     
 
 def post_detail(request, slug):
-    if slug == "first-post-detail":
+    if slug == "the-mountains":
         try:
             return HttpResponse("post detail is working!")
         except:
